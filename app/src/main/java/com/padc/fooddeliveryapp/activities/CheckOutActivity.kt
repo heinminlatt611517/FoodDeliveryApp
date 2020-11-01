@@ -79,6 +79,7 @@ class CheckOutActivity : BaseActivity(),CheckOutView {
     }
 
     private fun init() {
+        //to do
         tv_itemTitle.text = intent.getStringExtra(PARM_NAME).toString()
         tv_itemDetail.text = intent.getStringExtra(PARM_DESRIPTION).toString()
         tv_Rating.text = intent.getStringExtra(PARM_RATING).toString()
