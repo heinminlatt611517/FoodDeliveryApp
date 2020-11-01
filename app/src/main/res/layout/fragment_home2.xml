@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            app:queryHint="Search foods"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_showMore"
+            />
+
+        <ImageView
+            android:id="@+id/iv_showMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/searchView"
+            app:layout_constraintBottom_toBottomOf="@+id/searchView"
+            app:srcCompat="@drawable/icon_show_more"
+            android:layout_marginRight="@dimen/margin_large"/>
+
+        <TextView
+            android:id="@+id/tv_popularChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Choices"
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            app:layout_constraintStart_toStartOf="@+id/searchView"
+            android:layout_marginTop="@dimen/margin_large"
+            android:textColor="@android:color/holo_orange_dark"
+            style="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+        <TextView
+            android:id="@+id/tv_showAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_popularChoice"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_popularChoice"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Show All"
+            android:layout_marginRight="@dimen/margin_large"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popularChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_popularChoice"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <TextView
+            android:id="@+id/tv_NewRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Restaurants"
+            app:layout_constraintTop_toBottomOf="@+id/rv_popularChoice"
+            app:layout_constraintStart_toStartOf="@+id/searchView"
+            android:layout_marginTop="@dimen/margin_large"
+            android:textColor="@android:color/holo_orange_dark"
+            style="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+        <TextView
+            android:id="@+id/tv_showAllRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_NewRestaurant"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_NewRestaurant"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Show All"
+            android:layout_marginRight="@dimen/margin_large"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_newRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_NewRestaurant"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</ScrollView>

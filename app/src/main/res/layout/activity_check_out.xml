@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_left" />
+
+
+    <TextView
+        android:id="@+id/tv_titleOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        style="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titleOrder"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_large"
+            app:cardCornerRadius="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:elevation="2dp">
+
+            <ImageView
+                android:id="@+id/iv_newRestaurant"
+                android:layout_width="140dp"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_burger"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_itemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cardImageView"
+            android:text="Fast Burger"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:ems="10"
+            />
+
+        <TextView
+            android:id="@+id/tv_itemDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_itemTitle"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toRightOf="@+id/cardImageView"
+            android:text="Cafe - Western Food - $$"/>
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_itemDetail"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toRightOf="@+id/cardImageView"
+            android:text="4.9 (124 ratings)"
+            android:drawableLeft="@drawable/ic_star_24"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/divider_color"
+        app:layout_constraintBottom_toTopOf="@+id/tv_deliInstruct"
+        android:layout_marginBottom="@dimen/margin_large"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_addTextViewLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Add more foods"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:textColor="@android:color/holo_red_dark"
+            android:textAlignment="gravity"
+            />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_checkOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="24dp"
+        android:text="Check Out"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_xxlarge"/>
+
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_checkOut"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/margin_xxlarge"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tv_subTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtotal"
+            android:textSize="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_large"/>
+
+        <TextView
+            android:id="@+id/tv_deliCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Cost"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/tv_subTotal"
+            android:layout_marginLeft="@dimen/margin_large"/>
+
+        <TextView
+            android:id="@+id/tv_subTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textSize="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="@dimen/margin_large"
+            android:text="$60.00"/>
+
+        <TextView
+            android:id="@+id/tv_deliText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/tv_subTotalAmount"
+            android:layout_marginRight="@dimen/margin_large"
+            android:text="Free"/>
+
+        <TextView
+            android:id="@+id/tv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toTopOf="@+id/layout3"
+        />
+
+    <TextView
+        android:id="@+id/tv_deliInstruct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Instructions"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_divider1"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_large"/>
+
+    <TextView
+        android:id="@+id/tv_addNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/tv_deliInstruct"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_deliInstruct"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Add notes"
+        android:drawableEnd="@drawable/ic_add_24"
+        android:textColor="@android:color/holo_red_dark"
+        android:drawableRight="@drawable/ic_add_24"
+        android:layout_marginRight="@dimen/margin_large"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

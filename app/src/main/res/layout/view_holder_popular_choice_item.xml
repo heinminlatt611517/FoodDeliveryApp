@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_large"
+        app:cardCornerRadius="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="2dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/iv_popular"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_burger"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardImageView"
+        android:text="Fast Burger"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/tv_itemDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_itemTitle"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Cafe - Western Food - $$"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_itemDetail"
+        android:layout_below="@+id/tv_itemTitle"
+        android:drawableLeft="@drawable/ic_star_24"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:text="4.9"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@android:color/holo_red_dark"/>
+
+</RelativeLayout>

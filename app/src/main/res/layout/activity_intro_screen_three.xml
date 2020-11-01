@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/food_store_three"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_LiveTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find foods you love"
+        app:layout_constraintTop_toBottomOf="@id/iv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        />
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_LiveTrack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="Discover the best foods from\nover 1,000 restaurants."
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

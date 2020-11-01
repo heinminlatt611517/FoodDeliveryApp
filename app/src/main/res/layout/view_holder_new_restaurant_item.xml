@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_large"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_large"
+        app:cardCornerRadius="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/iv_newRestaurant"
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/food_store"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cardImageView"
+        android:text="Fast Burger"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:ems="10"
+        />
+
+    <TextView
+        android:id="@+id/tv_itemDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_itemTitle"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_toRightOf="@+id/cardImageView"
+        android:text="Cafe - Western Food - $$"/>
+
+    <TextView
+        android:id="@+id/tv_Rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_itemDetail"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_toRightOf="@+id/cardImageView"
+        android:text="4.9 (124 ratings)"
+        android:drawableLeft="@drawable/ic_star_24"/>
+
+    <TextView
+        android:id="@+id/tv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/cardImageView"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/divider_color"
+        />
+
+</RelativeLayout>
